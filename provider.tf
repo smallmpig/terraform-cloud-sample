@@ -11,11 +11,13 @@ terraform {
   }
 }
 
+variable "GOOGLE_CREDENTIALS" {}
 ##################################################################################
 # PROVIDERS
 ##################################################################################
 provider "google" {
   project = var.GCP_PROJECT
   region  = var.GCP_REGION
+  credentials = var.GOOGLE_CREDENTIALS
   # zone        = var.zone
 }
