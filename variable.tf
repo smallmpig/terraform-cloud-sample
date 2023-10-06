@@ -1,9 +1,3 @@
-variable "GCP_PROJECT" {
-  description = "GCP Project ID"
-  type        = string
-  default     = "peppy-ward-398202"
-}
-
 variable "gcr_name" {
   type    = string
   default = "cathay-start-gcr-module"
