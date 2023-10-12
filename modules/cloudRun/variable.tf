@@ -20,5 +20,5 @@ variable "container_name" {
 
 variable "spring_profile" {
 	type = string
-	default= "SPRING_PROFILES_ACTIVE=sit"
+	default= "sit"
 }
