@@ -15,6 +15,10 @@ variable "image_name"{
 
 variable "container_name" {
     type = string
-    default = ""
-  
+    default = "" 
+}
+
+variable "spring_profile" {
+	type = string
+	default= "SPRING_PROFILES_ACTIVE=sit"
 }
