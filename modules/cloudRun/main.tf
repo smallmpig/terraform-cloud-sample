@@ -10,10 +10,6 @@ resource "google_cloud_run_service" "module-gcr" {
             name           = "http1"
             container_port = 8080
             }
-			env {
-				name=SPRING_PROFILES_ACTIVE
-				value=var.spring_profile
-			}
         }
         }
     }
