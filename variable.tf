@@ -1,7 +1,7 @@
 variable "GCP_PROJECT" {
   description = "GCP Project ID"
   type        = string
-  default     = ""
+  default     = "peppy-ward-398202"
 }
 
 variable "gcr_name" {
