@@ -11,6 +11,7 @@ resource "google_cloud_run_service" "module-gcr" {
             container_port = 8080
             }
             env {
+             name = "set-env-vars"
              value = "SPRING_PROFILES_ACTIVE=sit"
             }
         }
