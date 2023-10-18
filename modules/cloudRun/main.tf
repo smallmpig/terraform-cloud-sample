@@ -24,9 +24,9 @@ resource "google_cloud_run_v2_service" "module-gcr" {
 
 # IAM 所有人都可以去access
 resource "google_cloud_run_service_iam_member" "public_access" {
-  location = google_cloud_run_service.module-gcr.location
-  project  = google_cloud_run_service.module-gcr.project
-  service  = google_cloud_run_service.module-gcr.name
+  location = google_cloud_run_v2_service.module-gcr.location
+  project  = google_cloud_run_v2_service.module-gcr.project
+  service  = google_cloud_run_v2_service.module-gcr.name
 
   role   = "roles/run.invoker"
   member = "allUsers"
