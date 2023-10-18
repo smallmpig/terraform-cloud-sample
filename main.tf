@@ -22,13 +22,14 @@ module "gcr-module-demo1" {
 #   }
 # }
 
-import {
-  to =google_vpc_access_connector.my-vpc
-  id = "raveb-vpc"
-}
+# import {
+#   to =google_vpc_access_connector.my-vpc
+#   id = "raveb-vpc"
+# }
 
-# import a VPC network if enable_vpc is set to 1 (true)
-resource "google_compute_network" "vpc_network" {
-  name                    = "raveb-vpc"
+# # import a VPC network if enable_vpc is set to 1 (true)
+# resource "google_compute_network" "vpc_network" {
+#   name                    = "raveb-vpc"
   
-}
+# }
+
