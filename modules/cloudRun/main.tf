@@ -15,6 +15,13 @@ resource "google_cloud_run_v2_service" "module-gcr" {
              value = "sit"
             }
         }
+        vpc_access {
+            network_interfaces {
+            network = "default"
+            subnetwork = "default"
+             }
+            egress = "ALL_TRAFFIC"
+        }
         
     }
     traffic {
