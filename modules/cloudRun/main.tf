@@ -1,8 +1,8 @@
-resource "google_cloud_run_service" "module-gcr" {
+resource "google_cloud_run_v2_service" "module-gcr" {
     name = var.container_name
     location = var.location
     template {
-        spec {
+        
         containers {
             # 下載檔案 docker hub - https://hub.docker.com/_/nginx
             image = var.image_name
@@ -11,15 +11,14 @@ resource "google_cloud_run_service" "module-gcr" {
             container_port = 8080
             }
             env {
-             name = "set-env-vars"
-             value = "SPRING_PROFILES_ACTIVE=sit"
+             name = "SPRING_PROFILES_ACTIVE"
+             value = "sit"
             }
         }
-        }
+        
     }
     traffic {
         percent         = 100
-        latest_revision = true
     }
 }
 
