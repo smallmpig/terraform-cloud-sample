@@ -7,6 +7,6 @@ output "cloud_run_location" {
 }
 
 
-# output "cloud_run_url" {
-#   value = google_cloud_run_v2_service.module-gcr.status[0].url
-# }
+output "cloud_run_url" {
+  value = google_cloud_run_v2_service.module-gcr.instances[0].attributes.uri
+}
