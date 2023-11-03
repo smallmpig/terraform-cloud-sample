@@ -1,3 +1,3 @@
-# output "cloud_run_url" {
-#   value = module.gcr-module-demo1.cloud_run_url
-# }
+output "loadbalancer_url" {
+  value = google_compute_global_address.lb_addr.address
+}
